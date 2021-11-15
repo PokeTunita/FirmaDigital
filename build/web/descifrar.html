@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descifrar AES</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</head>
+<body  background="./multimedia/314838-Sepik.jpg">
+    <header class="header">
+        <div class="cabecera logo-container">
+            Cifrado AES Gutierrez Bueno Elizabeth Andrea - Vasco Giraldo Juan Esteban (5IV7)
+        </div>
+    </header> 
+    <section class="main">
+        <center><h1>Descifrar y Verificar Firma</h1></center>
+        <div class="contenedor" >
+        <form action="Descifrar" method="POST" name="cifrar" enctype="multipart/form-data">
+            <br>
+            <br>
+            <input type="text" id="llave" name="llave" placeholder="Ingrese la llave" class="llave" minlength="16" maxlength="32">
+            <br>
+            <br>
+            <br>
+            <div class="input__row uploader" style="margin-left: 35%;">
+                <div id="inputval2" class="input-value"></div>
+                <label for="file_2"></label>
+                <input id="file_2" name="file_2" class="upload" type="file" >
+            </div>
+            <br>
+            <br>
+            <button class="boton">Descifrar</center></button>
+            <br>
+            <a href="index.jsp"><button type="button" class="boton">Ir al inicio</center></button></a>
+            <br>
+            <br>
+            <br>
+            <br>
+        </form>
+         </div>
+    </section>
+    <script>
+        $('#file_2').on('change',function(){
+        $('#inputval2').text( $(this).val());
+        });
+    </script>
+</body>
+</html>
